@@ -56,13 +56,12 @@
         - git diff —cached
 3. git commit
     - commit
-        - git commitß
+        - git commit
             - 편집기에서 comment 작성
         ```bash
         $ git commit
         [master 7e6af66] markdown!!
         1 file changed, 3 insertions(+), 1 deletion(-)
-
         ```
     - git commit -v
         - 편집기에 diff 메시지를 추가.
@@ -80,8 +79,7 @@
         - commit 후 추가할 파일이 있을 때 사용한다.
 4. git rm 
     - git rm 
-    ```bash
-        
+    ```bash        
         $ git rm tempfile.md
         rm 'tempfile.md'
 
@@ -101,6 +99,7 @@
 5. Modified 파일 되돌리기
     - git reset HEAD tempfile.md
         - unstaged 상태로 변경
+        
         ```bash
         $ git reset HEAD tempfile.md
         Unstaged changes after reset:
