@@ -124,7 +124,7 @@
         ```bash
         $ git checkout -- tempfile.md
         ```
-        
+
 6. git mv
     - git mv file_from file_to
         - 파일 이름 변경한다. 
@@ -163,6 +163,30 @@
     ```
     - git log --pretty=format:"%h - %an, %ar : %s" --graph
         - 브랜치와 머지 히스토리를 아스키 그래프로 출력해 준다.
+    - git log --oneline --decorate
+        - 현재 브랜치가 어떤 커밋을 가르키고 있는지를 보여준다.
+        
+    ```bash
+    $ git log --oneline --decorate
+    04345a6 (HEAD -> master, gitlab/master, markdown-test) edit
+    92ea5a3 ore edit
+    2a2c975 final
+    f1659c4 (origin/master) changed.
+    cf444ef edited again.
+    2061237 markdown edited
+    d5395e7 markdown edited
+    a744278 modified
+    5f868de Merge branch 'master' of https://github.com/thinkit-software/myRepository
+    09b6cc7 chekout all
+    848a151 Initial commit
+    79cab15 filename changed
+    cf43a9a new file
+    2c82830 temp file commit
+    842dabd commit not staged files
+    7e6af66 markdown!!
+    1882b3f READ ME
+    ```
+
 8. 리모트 저장소
     - git clone https://github.com/thinkit-software/myRepository
     - git remote
@@ -184,6 +208,27 @@
     origin	https://github.com/thinkit-software/myRepository (push)
     ```
     - git fetch pb
+    - git remote show origin
+        - 리모트 저장소의 구체적인 정보 확인
+
+        ```bash
+        $ git remote show origin
+        * remote origin
+        Fetch URL: https://github.com/thinkit-software/myRepository
+        Push  URL: https://github.com/thinkit-software/myRepository
+        HEAD branch: master
+        Remote branch:
+            master tracked
+        Local branch configured for 'git pull':
+            master merges with remote master
+        Local ref configured for 'git push':
+            master pushes to master (fast-forwardable)
+        ```
+    - git remote rename from_name to_name
+        - 리모트 저장소의 이름 변경
+    - git remote rm name
+        - 리모트 저장소 삭제
+
 9. git pull
     - git pull
     ```bash
