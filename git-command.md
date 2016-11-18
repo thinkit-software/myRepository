@@ -17,7 +17,6 @@
 
             modified:   README.md
         ```
-
     - git status --short
 
         ```bash
@@ -26,7 +25,6 @@
         ```
 
 2. 상태 변경 내용 보기
-
     - staged 상태가 아닌것
         - git diff
 
