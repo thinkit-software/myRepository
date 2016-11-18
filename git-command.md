@@ -1,4 +1,4 @@
-## git 명령어
+# git 명령어
 
 1. 상태 보기
     - git status
@@ -24,7 +24,7 @@
             MM README.md
         ```
 
-2. 상태 변경 내용 보기
+1. 상태 변경 내용 보기
     - staged 상태가 아닌것
         - git diff
 
@@ -54,7 +54,7 @@
         - git diff —staged
     - staged 상태인 것
         - git diff —cached
-3. git commit
+1. git commit
     - commit
         - git commit
             - 편집기에서 comment 작성
@@ -79,10 +79,10 @@
     - git commit --amend
         - commit 후 추가할 파일이 있을 때 사용한다.
 
-4. git rm 
-    - git rm 
+1. git rm
+    - git rm
 
-    ```bash        
+    ```bash
         $ git rm tempfile.md
         rm 'tempfile.md'
 
@@ -99,15 +99,15 @@
         - log/ 디렉토리에 있는 .log 파일을 모두 삭제한다.
     - git rm \\*~
         - ~로 끝나는 모든 파일을 제거한다.
-5. Modified 파일 되돌리기
+1. Modified 파일 되돌리기
     - git reset HEAD tempfile.md
         - unstaged 상태로 변경
 
         ```bash
         $ git reset HEAD tempfile.md
         Unstaged changes after reset:
-        M	README.md
-        D	tempfile.md
+        M   README.md
+        D   tempfile.md
 
         $ git status
         On branch master
@@ -125,32 +125,32 @@
         - **원래 파일로 되돌리기 때문에 수정된 사항은 모두 사라진다.**
 
         ```bash
-        $ git checkout -- tempfile.md
+        \$ git checkout -- tempfile.md
         ```
 
-6. git mv
+1. git mv
     - git mv file_from file_to
         - 파일 이름 변경한다. 
 
     ```bash
-        $ git mv tempfile.md tempfile2.md
-        
-        $ git status
-        On branch master
-        Changes to be committed:
-        (use "git reset HEAD <file>..." to unstage)
+    $ git mv tempfile.md tempfile2.md
 
-            renamed:    tempfile.md -> tempfile2.md
+    $ git status
+    On branch master
+    Changes to be committed:
+    (use "git reset HEAD <file>..." to unstage)
 
-        Changes not staged for commit:
-        (use "git add <file>..." to update what will be committed)
-        (use "git checkout -- <file>..." to discard changes in working directory)
+        renamed:    tempfile.md -> tempfile2.md
 
-            modified:   README.md
-            modified:   tempfile2.md
+    Changes not staged for commit:
+    (use "git add <file>..." to update what will be committed)
+    (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   README.md
+        modified:   tempfile2.md
     ```
 
-7. git log
+1. git log
     - git log 
         - 로그를 조회한다.
     - git log --pretty=oneline
@@ -191,27 +191,27 @@
         1882b3f READ ME
         ```
 
-8. 리모트 저장소
-    - git clone https://github.com/thinkit-software/myRepository
+1. 리모트 저장소
+    - git clone `https://github.com/thinkit-software/myRepository`
     - git remote
     - git remote -v
 
     ```bash
     $ git remote -v
-    origin	https://github.com/thinkit-software/myRepository (fetch)
-    origin	https://github.com/thinkit-software/myRepository (push)
+    origin  https://github.com/thinkit-software/myRepository (fetch)
+    origin  https://github.com/thinkit-software/myRepository (push)
     ```
-    - git remote add origin https://github.com/thinkit-software/myRepository 
+    - git remote add origin `https://github.com/thinkit-software/myRepository` 
     - git remote add gitlab git@gitlab.com:thinkit-software/myRepository.git
         - 두번째 저장소 추가
 
     ```bash
     $ git remote add gitlab git@gitlab.com:thinkit-software/myRepository.git
     $ git remote -v
-    gitlab	git@gitlab.com:thinkit-software/myRepository.git (fetch)
-    gitlab	git@gitlab.com:thinkit-software/myRepository.git (push)
-    origin	https://github.com/thinkit-software/myRepository (fetch)
-    origin	https://github.com/thinkit-software/myRepository (push)
+    gitlab  git@gitlab.com:thinkit-software/myRepository.git (fetch)
+    gitlab  git@gitlab.com:thinkit-software/myRepository.git (push)
+    origin  https://github.com/thinkit-software/myRepository (fetch)
+    origin  https://github.com/thinkit-software/myRepository (push)
     ```
     - git fetch pb
     - git remote show origin
@@ -235,7 +235,7 @@
     - git remote rm name
         - 리모트 저장소 삭제
 
-9. git pull
+1. git pull
     - git pull
 
     ```bash
@@ -243,10 +243,10 @@
     From https://github.com/thinkit-software/myRepository
     * branch            master     -> FETCH_HEAD
     fatal: refusing to merge unrelated histories
-    
+
     $ ls
-    git-command.md	tempfile2.md
-    
+    git-command.md  tempfile2.md
+
     $ git pull origin master --allow-unrelated-histories
     From https://github.com/thinkit-software/myRepository
     * branch            master     -> FETCH_HEAD
@@ -256,7 +256,7 @@
     create mode 100644 README.md
     ```
 
-10. branch
+1. branch
     - git branch new_branch
         - 신규 브랜치 생성
 
@@ -271,10 +271,10 @@
         - HEAD는 신규 브랜치를 가리킨다.
         - 브랜치를 이동하면 워킹 디렉토리의 파일이 변경된다.
         - 이동할 때는 워킹디렉토리를 정리하는 것이 좋다. 작업하던 것을 모두 커밋하고 이동한다. 
-    
+
         ```bash
         $ git checkout markdown-test
-        M	git-command.md
+        M   git-command.md
         Switched to branch 'markdown-test'
         ```
     - git log --oneline --decorate --graph --all
@@ -308,19 +308,19 @@
     - git merge
         - fast-forward : Merge 할 브랜치가 가르키는 커밋이 현 브랜치 커밋의 Upstream 브랜치이기 때문에 master 는 최신 커밋으로 이동한다.
             - A브랜치에서 B브랜치를 Merge 할 때 B가 A 이후의 커밋을 가리키고 있을 경우 A가 B의 커밋을 가리키면 된다.
-    
+
             ```bash
             $ git checkout master
             Switched to branch 'master'
             Your branch is ahead of 'origin/master' by 3 commits.
             (use "git push" to publish your local commits)
-            
+
             $ git merge markdown-test
             Updating 04345a6..f91da9a
             Fast-forward
             git-command.md | 164 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-------------------------------
             1 file changed, 133 insertions(+), 31 deletions(-)
-            ```    
+            ```
     - conflict
 
     ```bash
@@ -344,13 +344,13 @@
 
     no changes added to commit (use "git add" and/or "git commit -a")
     ```
-    - HEAD 버전 
+    - HEAD 버전
         - 위쪽은 merge 명령을 실행할 때 작업하던 master 브랜치의 내용
         - 아래쪽은 markdown-test 브랜치의 버전이다.
         - 충돌을 해결하려면 위나 아래에서 고르거나 새로 작성하여 merge 한다.
-    - git mergetool 
-        - 다른 도구를 사용하여 충돌을 해결한다.    
-        
+    - git mergetool
+        - 다른 도구를 사용하여 충돌을 해결한다.
+
     ```bash
     <<<<<<< HEAD
         - git branch -d branch_name
