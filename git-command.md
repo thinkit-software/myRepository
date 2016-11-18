@@ -162,7 +162,6 @@
             7e6af66 - david, 39 minutes ago : markdown!!
             1882b3f - david, 74 minutes ago : READ ME
         ```
-        
     - git log --pretty=format:"%h - %an, %ar : %s" --graph
         - 브랜치와 머지 히스토리를 아스키 그래프로 출력해 준다.
     - git log --oneline --decorate
@@ -193,6 +192,7 @@
     - git clone https://github.com/thinkit-software/myRepository
     - git remote
     - git remote -v
+
     ```bash
     $ git remote -v
     origin	https://github.com/thinkit-software/myRepository (fetch)
@@ -201,6 +201,7 @@
     - git remote add origin https://github.com/thinkit-software/myRepository 
     - git remote add gitlab git@gitlab.com:thinkit-software/myRepository.git
         - 두번째 저장소 추가
+
     ```bash
     $ git remote add gitlab git@gitlab.com:thinkit-software/myRepository.git
     $ git remote -v
@@ -233,20 +234,21 @@
 
 9. git pull
     - git pull
+
     ```bash
-        $ git pull origin master
-        From https://github.com/thinkit-software/myRepository
-        * branch            master     -> FETCH_HEAD
-        fatal: refusing to merge unrelated histories
-        
-        $ ls
-        git-command.md	tempfile2.md
-        
-        $ git pull origin master --allow-unrelated-histories
-        From https://github.com/thinkit-software/myRepository
-        * branch            master     -> FETCH_HEAD
-        Merge made by the 'recursive' strategy.
-        README.md | 1 +
-        1 file changed, 1 insertion(+)
-        create mode 100644 README.md
+    $ git pull origin master
+    From https://github.com/thinkit-software/myRepository
+    * branch            master     -> FETCH_HEAD
+    fatal: refusing to merge unrelated histories
+    
+    $ ls
+    git-command.md	tempfile2.md
+    
+    $ git pull origin master --allow-unrelated-histories
+    From https://github.com/thinkit-software/myRepository
+    * branch            master     -> FETCH_HEAD
+    Merge made by the 'recursive' strategy.
+    README.md | 1 +
+    1 file changed, 1 insertion(+)
+    create mode 100644 README.md
     ```
