@@ -303,20 +303,76 @@
         ``` 
     - git checkout -b new_branch
         - 브랜치를 생성하고 checkout까지 한다.
+    - git branch -d branch_name
+        - 브랜치를 삭제한다.
     - git merge
+        - fast-forward : Merge 할 브랜치가 가르키는 커밋이 현 브랜치 커밋의 Upstream 브랜치이기 때문에 master 는 최신 커밋으로 이동한다.
+            - A브랜치에서 B브랜치를 Merge 할 때 B가 A 이후의 커밋을 가리키고 있을 경우 A가 B의 커밋을 가리키면 된다.
+    
+            ```bash
+            $ git checkout master
+            Switched to branch 'master'
+            Your branch is ahead of 'origin/master' by 3 commits.
+            (use "git push" to publish your local commits)
+            
+            $ git merge markdown-test
+            Updating 04345a6..f91da9a
+            Fast-forward
+            git-command.md | 164 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-------------------------------
+            1 file changed, 133 insertions(+), 31 deletions(-)
+            ```    
+    - conflict
 
     ```bash
-    $ git checkout master
-    Switched to branch 'master'
-    Your branch is ahead of 'origin/master' by 3 commits.
+    $ git merge master
+    Auto-merging git-command.md
+    CONFLICT (content): Merge conflict in git-command.md
+    Automatic merge failed; fix conflicts and then commit the result.
+
+    $ git status
+    On branch markdown-test
+    Your branch is ahead of 'origin/markdown-test' by 4 commits.
     (use "git push" to publish your local commits)
-    
-    $ git merge markdown-test
-    Updating 04345a6..f91da9a
-    Fast-forward
-    git-command.md | 164 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-------------------------------
-    1 file changed, 133 insertions(+), 31 deletions(-)
-    ```    
+    You have unmerged paths.
+    (fix conflicts and run "git commit")
+    (use "git merge --abort" to abort the merge)
+
+    Unmerged paths:
+    (use "git add <file>..." to mark resolution)
+
+        both modified:   git-command.md
+
+    no changes added to commit (use "git add" and/or "git commit -a")
+    ```
+    - HEAD 버전 
+        - 위쪽은 merge 명령을 실행할 때 작업하던 master 브랜치의 내용
+        - 아래쪽은 markdown-test 브랜치의 버전이다.
+        - 충돌을 해결하려면 위나 아래에서 고르거나 새로 작성하여 merge 한다.
+    - git mergetool 
+        - 다른 도구를 사용하여 충돌을 해결한다.    
+        
+    ```bash
+    <<<<<<< HEAD
+        - git branch -d branch_name
+            - 브랜치를 삭제한다.
+
+    =======
+        - git merge
+
+        ```bash
+        $ git checkout master
+        Switched to branch 'master'
+        Your branch is ahead of 'origin/master' by 3 commits.
+        (use "git push" to publish your local commits)
+
+        $ git merge markdown-test
+        Updating 04345a6..f91da9a
+        Fast-forward
+        git-command.md | 164 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-------------------------------
+        1 file changed, 133 insertions(+), 31 deletions(-)
+        ```
+    >>>>>>> master
+    ```
     - git branch --merged
         - 이미 merge한 브랜치 목록
     - git branch --no-merged
@@ -332,4 +388,3 @@
         error: The branch 'markdown-test' is not fully merged.
         If you are sure you want to delete it, run 'git branch -D markdown-test'.
         ```
-    
