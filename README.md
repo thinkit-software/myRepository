@@ -92,3 +92,59 @@
         1 file changed, 84 insertions(+), 1 deletion(-)
 
         ```
+
+    4. git rm 
+
+        - git rm 
+
+        ```bash
+            
+            $ git rm tempfile.md
+            rm 'tempfile.md'
+
+            $ git status
+            On branch master
+            Changes to be committed:
+            (use "git reset HEAD <file>..." to unstage)
+
+                deleted:    tempfile.md
+
+        ```
+        - git rm --cached tempfile.md
+            - staged 상태에서만 제거하고 로컬 파일은 그대로 둔다.
+
+        - git rm log/\\*.log 
+            - log/ 디렉토리에 있는 .log 파일을 모두 삭제한다.
+
+        - git rm \\*~
+            - ~로 끝나는 모든 파일을 제거한다.
+
+    5. Modified 파일 되돌리기
+
+        - git reset HEAD tempfile.md
+            - unstaged 상태로 변경
+
+            ```bash
+            $ git reset HEAD tempfile.md
+            Unstaged changes after reset:
+            M	README.md
+            D	tempfile.md
+
+            $ git status
+            On branch master
+            Changes not staged for commit:
+            (use "git add/rm <file>..." to update what will be committed)
+            (use "git checkout -- <file>..." to discard changes in working directory)
+
+                modified:   README.md
+                deleted:    tempfile.md
+
+            no changes added to commit (use "git add" and/or "git commit -a")
+            ```
+
+        - git checkout -- tempfile.md
+            - 변경 사항 되돌리기
+            - **원래 파일로 되돌리기 때문에 수정된 사항은 모두 사라진다.**
+            ```bash
+            $ git checkout -- tempfile.md
+            ```
