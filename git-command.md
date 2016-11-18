@@ -53,11 +53,11 @@
 
     - 커밋한 것과 staged area 있는 것 비교
         - git diff —staged
+
     - staged 상태인 것
         - git diff —cached
 
 3. git commit
-
     - commit
         - git commitß
             - 편집기에서 comment 작성
@@ -78,12 +78,14 @@
     - git commit -a -m 'commit not staged files'
         - tracked된 파일의 staged 단계를 생략한다.
         - staged 되지 않은 파일을 포함하여 commit.
+
         ``` bash
         $ git commit -a -m 'commit not staged files'
         [master 842dabd] commit not staged files
         1 file changed, 84 insertions(+), 1 deletion(-)
 
         ```
+
     - git commit --amend
         - commit 후 추가할 파일이 있을 때 사용한다.
 
@@ -102,8 +104,8 @@
         (use "git reset HEAD <file>..." to unstage)
 
             deleted:    tempfile.md
-
     ```
+    
     - git rm --cached tempfile.md
         - staged 상태에서만 제거하고 로컬 파일은 그대로 둔다.
 
