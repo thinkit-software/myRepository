@@ -255,3 +255,51 @@
     1 file changed, 1 insertion(+)
     create mode 100644 README.md
     ```
+
+10. branch
+    - git branch new_branch
+        - 신규 브랜치 생성
+    ```bash
+    $ git branch markdown-test
+
+    $ git branch
+    markdown-test
+    * master
+    ```
+    - git checkout new_branch
+        - HEAD는 신규 브랜치를 가리킨다.
+        - 브랜치를 이동하면 워킹 디렉토리의 파일이 변경된다.
+        - 이동할 때는 워킹디렉토리를 정리하는 것이 좋다. 작업하던 것을 모두 커밋하고 이동한다. 
+    ```bash
+    $ git checkout markdown-test
+    M	git-command.md
+    Switched to branch 'markdown-test'
+    ```
+    - git log --oneline --decorate --graph --all
+        - 현재 브랜치가 가리키고 있는 히스토리가 무엇이고, 어떻게 갈라져 나왔는지 보여준다.
+
+    ```bash
+    $ git log --oneline --decorate --graph --all
+    * f012322 (origin/markdown-test, gitlab/markdown-test, markdown-test) test5
+    * 6345adf test4
+    * c856ced test3
+    * be58dbe test2
+    * 3ab5345 branch test
+    * 04345a6 (HEAD -> master, gitlab/master) edit
+    * 92ea5a3 ore edit
+    * 2a2c975 final
+    * f1659c4 (origin/master) changed.
+    * cf444ef edited again.
+    * 2061237 markdown edited
+    * d5395e7 markdown edited
+    * a744278 modified
+    *   5f868de Merge branch 'master' of https://github.com/thinkit-software/myRepository
+    |\
+    | * 848a151 Initial commit
+    * 09b6cc7 chekout all
+    * 79cab15 filename changed
+    ``` 
+    - git checkout -b new_branch
+        - 브랜치를 생성하고 checkout까지 한다.
+
+    
