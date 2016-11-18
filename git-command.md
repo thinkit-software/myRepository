@@ -58,27 +58,31 @@
     - commit
         - git commit
             - 편집기에서 comment 작성
-        ```bash
-        $ git commit
-        [master 7e6af66] markdown!!
-        1 file changed, 3 insertions(+), 1 deletion(-)
-        ```
+            ```bash
+            $ git commit
+            [master 7e6af66] markdown!!
+            1 file changed, 3 insertions(+), 1 deletion(-)
+            ```
+
     - git commit -v
         - 편집기에 diff 메시지를 추가.
     - git commit -m "comment"
     - git commit -a -m 'commit not staged files'
         - tracked된 파일의 staged 단계를 생략한다.
         - staged 되지 않은 파일을 포함하여 commit.
+
         ``` bash
         $ git commit -a -m 'commit not staged files'
         [master 842dabd] commit not staged files
         1 file changed, 84 insertions(+), 1 deletion(-)
-
         ```
+
     - git commit --amend
         - commit 후 추가할 파일이 있을 때 사용한다.
+
 4. git rm 
     - git rm 
+
     ```bash        
         $ git rm tempfile.md
         rm 'tempfile.md'
@@ -90,6 +94,7 @@
 
             deleted:    tempfile.md
     ```
+    
     - git rm --cached tempfile.md
         - staged 상태에서만 제거하고 로컬 파일은 그대로 둔다.
     - git rm log/\\*.log 
