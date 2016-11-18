@@ -84,7 +84,7 @@
     - git commit -m "comment"
 
     - git commit -a -m 'commit not staged files'
-        - staged 단계를 생략한다.
+        - tracked된 파일의 staged 단계를 생략한다.
         - staged 되지 않은 파일을 포함하여 commit.
         ``` bash
         $ git commit -a -m 'commit not staged files'
