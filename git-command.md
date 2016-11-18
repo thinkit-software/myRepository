@@ -343,6 +343,7 @@
 
     no changes added to commit (use "git add" and/or "git commit -a")
     ```
+    
         - HEAD 버전 
             - 위쪽은 merge 명령을 실행할 때 작업하던 master 브랜치의 내용
             - 아래쪽은 markdown-test 브랜치의 버전이다.
