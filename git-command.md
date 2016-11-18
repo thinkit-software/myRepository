@@ -99,7 +99,7 @@
 5. Modified 파일 되돌리기
     - git reset HEAD tempfile.md
         - unstaged 상태로 변경
-        
+
         ```bash
         $ git reset HEAD tempfile.md
         Unstaged changes after reset:
@@ -120,12 +120,15 @@
     - git checkout -- tempfile.md
         - 변경 사항 되돌리기
         - **원래 파일로 되돌리기 때문에 수정된 사항은 모두 사라진다.**
+
         ```bash
         $ git checkout -- tempfile.md
         ```
+        
 6. git mv
     - git mv file_from file_to
         - 파일 이름 변경한다. 
+
     ```bash
         $ git mv tempfile.md tempfile2.md
         
@@ -143,6 +146,7 @@
             modified:   README.md
             modified:   tempfile2.md
     ```
+
 7. git log
     - git log 
         - 로그를 조회한다.
