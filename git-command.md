@@ -317,3 +317,19 @@
     git-command.md | 164 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-------------------------------
     1 file changed, 133 insertions(+), 31 deletions(-)
     ```    
+    - git branch --merged
+        - 이미 merge한 브랜치 목록
+    - git branch --no-merged
+        - 아직 merge 하지 않은 브랜치 목록
+    - git branch -d markdown-test
+        - 아직 merge 하지 않은 브랙치는 -d로는 삭제되지 않는다.
+
+        ```bash
+        $ git branch --no-merged
+        markdown-test
+
+        $ git branch -d markdown-test
+        error: The branch 'markdown-test' is not fully merged.
+        If you are sure you want to delete it, run 'git branch -D markdown-test'.
+        ```
+    
