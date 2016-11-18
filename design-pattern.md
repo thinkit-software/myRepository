@@ -18,6 +18,8 @@
             - 새로운 추상 클래스를 만듦으로써 모듈의 추가 행동들을 확장할 수 있다.
 
             ![Client not open and closed](./images/design_pattern_ocp_001.png)
+	1. tab size
+		- different.
 
 1. L
 
