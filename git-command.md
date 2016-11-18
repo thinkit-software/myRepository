@@ -259,22 +259,24 @@
 10. branch
     - git branch new_branch
         - 신규 브랜치 생성
-    ```bash
-    $ git branch markdown-test
 
-    $ git branch
-    markdown-test
-    * master
-    ```
+        ```bash
+        $ git branch markdown-test
+
+        $ git branch
+        markdown-test
+        * master
+        ```
     - git checkout new_branch
         - HEAD는 신규 브랜치를 가리킨다.
         - 브랜치를 이동하면 워킹 디렉토리의 파일이 변경된다.
         - 이동할 때는 워킹디렉토리를 정리하는 것이 좋다. 작업하던 것을 모두 커밋하고 이동한다. 
-    ```bash
-    $ git checkout markdown-test
-    M	git-command.md
-    Switched to branch 'markdown-test'
-    ```
+    
+        ```bash
+        $ git checkout markdown-test
+        M	git-command.md
+        Switched to branch 'markdown-test'
+        ```
     - git log --oneline --decorate --graph --all
         - 현재 브랜치가 가리키고 있는 히스토리가 무엇이고, 어떻게 갈라져 나왔는지 보여준다.
 
