@@ -70,27 +70,20 @@
 
     - git commit -v
         - 편집기에 diff 메시지를 추가.
-
     - git commit -m "comment"
-
     - git commit -a -m 'commit not staged files'
         - tracked된 파일의 staged 단계를 생략한다.
         - staged 되지 않은 파일을 포함하여 commit.
-
         ``` bash
         $ git commit -a -m 'commit not staged files'
         [master 842dabd] commit not staged files
         1 file changed, 84 insertions(+), 1 deletion(-)
 
         ```
-
     - git commit --amend
         - commit 후 추가할 파일이 있을 때 사용한다.
-
 4. git rm 
-
     - git rm 
-
     ```bash
         
         $ git rm tempfile.md
@@ -103,21 +96,15 @@
 
             deleted:    tempfile.md
     ```
-
     - git rm --cached tempfile.md
         - staged 상태에서만 제거하고 로컬 파일은 그대로 둔다.
-
     - git rm log/\\*.log 
         - log/ 디렉토리에 있는 .log 파일을 모두 삭제한다.
-
     - git rm \\*~
         - ~로 끝나는 모든 파일을 제거한다.
-
 5. Modified 파일 되돌리기
-
     - git reset HEAD tempfile.md
         - unstaged 상태로 변경
-
         ```bash
         $ git reset HEAD tempfile.md
         Unstaged changes after reset:
@@ -135,18 +122,15 @@
 
         no changes added to commit (use "git add" and/or "git commit -a")
         ```
-
     - git checkout -- tempfile.md
         - 변경 사항 되돌리기
         - **원래 파일로 되돌리기 때문에 수정된 사항은 모두 사라진다.**
         ```bash
         $ git checkout -- tempfile.md
         ```
-
 6. git mv
     - git mv file_from file_to
         - 파일 이름 변경한다. 
-
     ```bash
         $ git mv tempfile.md tempfile2.md
         
@@ -167,11 +151,8 @@
 7. git log
     - git log 
         - 로그를 조회한다.
-
     - git log --pretty=oneline
-
     - git log --pretty=format:"%h - %an, %ar : %s"
-
     ```bash
         $ git log --pretty=format:"%h - %an, %ar : %s"
         79cab15 - david, 5 minutes ago : filename changed
@@ -183,23 +164,16 @@
     ```
     - git log --pretty=format:"%h - %an, %ar : %s" --graph
         - 브랜치와 머지 히스토리를 아스키 그래프로 출력해 준다.
-
 8. 리모트 저장소
-
     - git clone https://github.com/thinkit-software/myRepository
-
     - git remote
-
     - git remote -v
-
     ```bash
     $ git remote -v
     origin	https://github.com/thinkit-software/myRepository (fetch)
     origin	https://github.com/thinkit-software/myRepository (push)
     ```
-
     - git remote add origin https://github.com/thinkit-software/myRepository 
-
     - git remote add gitlab git@gitlab.com:thinkit-software/myRepository.git
         - 두번째 저장소 추가
     ```bash
@@ -210,12 +184,9 @@
     origin	https://github.com/thinkit-software/myRepository (fetch)
     origin	https://github.com/thinkit-software/myRepository (push)
     ```
-
     - git fetch pb
-
 9. git pull
     - git pull
-
     ```bash
         $ git pull origin master
         From https://github.com/thinkit-software/myRepository
@@ -233,3 +204,4 @@
         1 file changed, 1 insertion(+)
         create mode 100644 README.md
     ```
+    
