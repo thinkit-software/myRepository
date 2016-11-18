@@ -1,10 +1,6 @@
-# READ ME
-
 ## git 명령어
----
 
 1. 상태 보기
-
     - git status
 
         ```bash
@@ -23,12 +19,11 @@
         ```
 
     - git status --short
+
         ```bash
             $ git status --short
             MM README.md
         ```
-
-
 
 2. 상태 변경 내용 보기
 
@@ -63,11 +58,10 @@
     - staged 상태인 것
         - git diff —cached
 
-
 3. git commit
 
     - commit
-        - git commit
+        - git commitß
             - 편집기에서 comment 작성
 
         ```bash
@@ -95,101 +89,149 @@
     - git commit --amend
         - commit 후 추가할 파일이 있을 때 사용한다.
 
-    4. git rm 
+4. git rm 
 
-        - git rm 
+    - git rm 
 
-        ```bash
-            
-            $ git rm tempfile.md
-            rm 'tempfile.md'
+    ```bash
+        
+        $ git rm tempfile.md
+        rm 'tempfile.md'
 
-            $ git status
-            On branch master
-            Changes to be committed:
-            (use "git reset HEAD <file>..." to unstage)
+        $ git status
+        On branch master
+        Changes to be committed:
+        (use "git reset HEAD <file>..." to unstage)
 
-                deleted:    tempfile.md
+            deleted:    tempfile.md
 
-        ```
-        - git rm --cached tempfile.md
-            - staged 상태에서만 제거하고 로컬 파일은 그대로 둔다.
+    ```
+    - git rm --cached tempfile.md
+        - staged 상태에서만 제거하고 로컬 파일은 그대로 둔다.
 
-        - git rm log/\\*.log 
-            - log/ 디렉토리에 있는 .log 파일을 모두 삭제한다.
+    - git rm log/\\*.log 
+        - log/ 디렉토리에 있는 .log 파일을 모두 삭제한다.
 
-        - git rm \\*~
-            - ~로 끝나는 모든 파일을 제거한다.
+    - git rm \\*~
+        - ~로 끝나는 모든 파일을 제거한다.
 
-    5. Modified 파일 되돌리기
+5. Modified 파일 되돌리기
 
-        - git reset HEAD tempfile.md
-            - unstaged 상태로 변경
-
-            ```bash
-            $ git reset HEAD tempfile.md
-            Unstaged changes after reset:
-            M	README.md
-            D	tempfile.md
-
-            $ git status
-            On branch master
-            Changes not staged for commit:
-            (use "git add/rm <file>..." to update what will be committed)
-            (use "git checkout -- <file>..." to discard changes in working directory)
-
-                modified:   README.md
-                deleted:    tempfile.md
-
-            no changes added to commit (use "git add" and/or "git commit -a")
-            ```
-
-        - git checkout -- tempfile.md
-            - 변경 사항 되돌리기
-            - **원래 파일로 되돌리기 때문에 수정된 사항은 모두 사라진다.**
-            ```bash
-            $ git checkout -- tempfile.md
-            ```
-
-    6. git mv
-        - git mv file_from file_to
-            - 파일 이름 변경한다. 
+    - git reset HEAD tempfile.md
+        - unstaged 상태로 변경
 
         ```bash
-            $ git mv tempfile.md tempfile2.md
-            
-            $ git status
-            On branch master
-            Changes to be committed:
-            (use "git reset HEAD <file>..." to unstage)
+        $ git reset HEAD tempfile.md
+        Unstaged changes after reset:
+        M	README.md
+        D	tempfile.md
 
-                renamed:    tempfile.md -> tempfile2.md
+        $ git status
+        On branch master
+        Changes not staged for commit:
+        (use "git add/rm <file>..." to update what will be committed)
+        (use "git checkout -- <file>..." to discard changes in working directory)
 
-            Changes not staged for commit:
-            (use "git add <file>..." to update what will be committed)
-            (use "git checkout -- <file>..." to discard changes in working directory)
+            modified:   README.md
+            deleted:    tempfile.md
 
-                modified:   README.md
-                modified:   tempfile2.md
+        no changes added to commit (use "git add" and/or "git commit -a")
         ```
-    7. git log
-        - git log 
-            - 로그를 조회한다.
 
-        - git log --pretty=oneline
-
-        - git log --pretty=format:"%h - %an, %ar : %s"
-
+    - git checkout -- tempfile.md
+        - 변경 사항 되돌리기
+        - **원래 파일로 되돌리기 때문에 수정된 사항은 모두 사라진다.**
         ```bash
-            $ git log --pretty=format:"%h - %an, %ar : %s"
-            79cab15 - david, 5 minutes ago : filename changed
-            cf43a9a - david, 29 minutes ago : new file
-            2c82830 - david, 31 minutes ago : temp file commit
-            842dabd - david, 34 minutes ago : commit not staged files
-            7e6af66 - david, 39 minutes ago : markdown!!
-            1882b3f - david, 74 minutes ago : READ ME
+        $ git checkout -- tempfile.md
         ```
-        - git log --pretty=format:"%h - %an, %ar : %s" --graph
-            - 브랜치와 머지 히스토리를 아스키 그래프로 출력해 준다.
 
-    8. 
+6. git mv
+    - git mv file_from file_to
+        - 파일 이름 변경한다. 
+
+    ```bash
+        $ git mv tempfile.md tempfile2.md
+        
+        $ git status
+        On branch master
+        Changes to be committed:
+        (use "git reset HEAD <file>..." to unstage)
+
+            renamed:    tempfile.md -> tempfile2.md
+
+        Changes not staged for commit:
+        (use "git add <file>..." to update what will be committed)
+        (use "git checkout -- <file>..." to discard changes in working directory)
+
+            modified:   README.md
+            modified:   tempfile2.md
+    ```
+7. git log
+    - git log 
+        - 로그를 조회한다.
+
+    - git log --pretty=oneline
+
+    - git log --pretty=format:"%h - %an, %ar : %s"
+
+    ```bash
+        $ git log --pretty=format:"%h - %an, %ar : %s"
+        79cab15 - david, 5 minutes ago : filename changed
+        cf43a9a - david, 29 minutes ago : new file
+        2c82830 - david, 31 minutes ago : temp file commit
+        842dabd - david, 34 minutes ago : commit not staged files
+        7e6af66 - david, 39 minutes ago : markdown!!
+        1882b3f - david, 74 minutes ago : READ ME
+    ```
+    - git log --pretty=format:"%h - %an, %ar : %s" --graph
+        - 브랜치와 머지 히스토리를 아스키 그래프로 출력해 준다.
+
+8. 리모트 저장소
+
+    - git clone https://github.com/thinkit-software/myRepository
+
+    - git remote
+
+    - git remote -v
+
+    ```bash
+    $ git remote -v
+    origin	https://github.com/thinkit-software/myRepository (fetch)
+    origin	https://github.com/thinkit-software/myRepository (push)
+    ```
+
+    - git remote add origin https://github.com/thinkit-software/myRepository 
+
+    - git remote add gitlab git@gitlab.com:thinkit-software/myRepository.git
+        - 두번째 저장소 추가
+    ```bash
+    $ git remote add gitlab git@gitlab.com:thinkit-software/myRepository.git
+    $ git remote -v
+    gitlab	git@gitlab.com:thinkit-software/myRepository.git (fetch)
+    gitlab	git@gitlab.com:thinkit-software/myRepository.git (push)
+    origin	https://github.com/thinkit-software/myRepository (fetch)
+    origin	https://github.com/thinkit-software/myRepository (push)
+    ```
+
+    - git fetch pb
+
+9. git pull
+    - git pull
+
+    ```bash
+        $ git pull origin master
+        From https://github.com/thinkit-software/myRepository
+        * branch            master     -> FETCH_HEAD
+        fatal: refusing to merge unrelated histories
+        
+        $ ls
+        git-command.md	tempfile2.md
+        
+        $ git pull origin master --allow-unrelated-histories
+        From https://github.com/thinkit-software/myRepository
+        * branch            master     -> FETCH_HEAD
+        Merge made by the 'recursive' strategy.
+        README.md | 1 +
+        1 file changed, 1 insertion(+)
+        create mode 100644 README.md
+    ```
