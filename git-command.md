@@ -309,19 +309,18 @@
         - fast-forward : Merge 할 브랜치가 가르키는 커밋이 현 브랜치 커밋의 Upstream 브랜치이기 때문에 master 는 최신 커밋으로 이동한다.
             - A브랜치에서 B브랜치를 Merge 할 때 B가 A 이후의 커밋을 가리키고 있을 경우 A가 B의 커밋을 가리키면 된다.
     
-    ```bash
-    $ git checkout master
-    Switched to branch 'master'
-    Your branch is ahead of 'origin/master' by 3 commits.
-    (use "git push" to publish your local commits)
-    
-    $ git merge markdown-test
-    Updating 04345a6..f91da9a
-    Fast-forward
-    git-command.md | 164 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-------------------------------
-    1 file changed, 133 insertions(+), 31 deletions(-)
-    ```    
-
+            ```bash
+            $ git checkout master
+            Switched to branch 'master'
+            Your branch is ahead of 'origin/master' by 3 commits.
+            (use "git push" to publish your local commits)
+            
+            $ git merge markdown-test
+            Updating 04345a6..f91da9a
+            Fast-forward
+            git-command.md | 164 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-------------------------------
+            1 file changed, 133 insertions(+), 31 deletions(-)
+            ```    
     - conflict
 
     ```bash
@@ -345,7 +344,6 @@
 
     no changes added to commit (use "git add" and/or "git commit -a")
     ```
-
     - HEAD 버전 
         - 위쪽은 merge 명령을 실행할 때 작업하던 master 브랜치의 내용
         - 아래쪽은 markdown-test 브랜치의 버전이다.
