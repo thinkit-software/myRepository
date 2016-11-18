@@ -54,20 +54,16 @@
         - git diff —staged
     - staged 상태인 것
         - git diff —cached
-
 3. git commit
     - commit
         - git commitß
             - 편집기에서 comment 작성
-
         ```bash
-
         $ git commit
         [master 7e6af66] markdown!!
         1 file changed, 3 insertions(+), 1 deletion(-)
 
         ```
-
     - git commit -v
         - 편집기에 diff 메시지를 추가.
     - git commit -m "comment"
@@ -204,4 +200,3 @@
         1 file changed, 1 insertion(+)
         create mode 100644 README.md
     ```
-    
