@@ -50,10 +50,8 @@
             +        - git diff —cached
             +
         ```
-
     - 커밋한 것과 staged area 있는 것 비교
         - git diff —staged
-
     - staged 상태인 것
         - git diff —cached
 
@@ -105,7 +103,7 @@
 
             deleted:    tempfile.md
     ```
-    
+
     - git rm --cached tempfile.md
         - staged 상태에서만 제거하고 로컬 파일은 그대로 둔다.
 
