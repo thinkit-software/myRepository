@@ -20,8 +20,8 @@
     - git status --short
 
         ```bash
-            $ git status --short
-            MM README.md
+        $ git status --short
+        MM README.md
         ```
 
 1. 상태 변경 내용 보기
