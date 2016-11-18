@@ -92,6 +92,8 @@
         1 file changed, 84 insertions(+), 1 deletion(-)
 
         ```
+    - git commit --amend
+        - commit 후 추가할 파일이 있을 때 사용한다.
 
     4. git rm 
 
@@ -148,3 +150,46 @@
             ```bash
             $ git checkout -- tempfile.md
             ```
+
+    6. git mv
+        - git mv file_from file_to
+            - 파일 이름 변경한다. 
+
+        ```bash
+            $ git mv tempfile.md tempfile2.md
+            
+            $ git status
+            On branch master
+            Changes to be committed:
+            (use "git reset HEAD <file>..." to unstage)
+
+                renamed:    tempfile.md -> tempfile2.md
+
+            Changes not staged for commit:
+            (use "git add <file>..." to update what will be committed)
+            (use "git checkout -- <file>..." to discard changes in working directory)
+
+                modified:   README.md
+                modified:   tempfile2.md
+        ```
+    7. git log
+        - git log 
+            - 로그를 조회한다.
+
+        - git log --pretty=oneline
+
+        - git log --pretty=format:"%h - %an, %ar : %s"
+
+        ```bash
+            $ git log --pretty=format:"%h - %an, %ar : %s"
+            79cab15 - david, 5 minutes ago : filename changed
+            cf43a9a - david, 29 minutes ago : new file
+            2c82830 - david, 31 minutes ago : temp file commit
+            842dabd - david, 34 minutes ago : commit not staged files
+            7e6af66 - david, 39 minutes ago : markdown!!
+            1882b3f - david, 74 minutes ago : READ ME
+        ```
+        - git log --pretty=format:"%h - %an, %ar : %s" --graph
+            - 브랜치와 머지 히스토리를 아스키 그래프로 출력해 준다.
+
+    8. 
