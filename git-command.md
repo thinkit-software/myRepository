@@ -280,27 +280,27 @@
     - git log --oneline --decorate --graph --all
         - 현재 브랜치가 가리키고 있는 히스토리가 무엇이고, 어떻게 갈라져 나왔는지 보여준다.
 
-    ```bash
-    $ git log --oneline --decorate --graph --all
-    * f012322 (origin/markdown-test, gitlab/markdown-test, markdown-test) test5
-    * 6345adf test4
-    * c856ced test3
-    * be58dbe test2
-    * 3ab5345 branch test
-    * 04345a6 (HEAD -> master, gitlab/master) edit
-    * 92ea5a3 ore edit
-    * 2a2c975 final
-    * f1659c4 (origin/master) changed.
-    * cf444ef edited again.
-    * 2061237 markdown edited
-    * d5395e7 markdown edited
-    * a744278 modified
-    *   5f868de Merge branch 'master' of https://github.com/thinkit-software/myRepository
-    |\
-    | * 848a151 Initial commit
-    * 09b6cc7 chekout all
-    * 79cab15 filename changed
-    ``` 
+        ```bash
+        $ git log --oneline --decorate --graph --all
+        * f012322 (origin/markdown-test, gitlab/markdown-test, markdown-test) test5
+        * 6345adf test4
+        * c856ced test3
+        * be58dbe test2
+        * 3ab5345 branch test
+        * 04345a6 (HEAD -> master, gitlab/master) edit
+        * 92ea5a3 ore edit
+        * 2a2c975 final
+        * f1659c4 (origin/master) changed.
+        * cf444ef edited again.
+        * 2061237 markdown edited
+        * d5395e7 markdown edited
+        * a744278 modified
+        *   5f868de Merge branch 'master' of https://github.com/thinkit-software/myRepository
+        |\
+        | * 848a151 Initial commit
+        * 09b6cc7 chekout all
+        * 79cab15 filename changed
+        ``` 
     - git checkout -b new_branch
         - 브랜치를 생성하고 checkout까지 한다.
 
