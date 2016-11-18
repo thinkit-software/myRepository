@@ -152,40 +152,42 @@
         - 로그를 조회한다.
     - git log --pretty=oneline
     - git log --pretty=format:"%h - %an, %ar : %s"
-    ```bash
-        $ git log --pretty=format:"%h - %an, %ar : %s"
-        79cab15 - david, 5 minutes ago : filename changed
-        cf43a9a - david, 29 minutes ago : new file
-        2c82830 - david, 31 minutes ago : temp file commit
-        842dabd - david, 34 minutes ago : commit not staged files
-        7e6af66 - david, 39 minutes ago : markdown!!
-        1882b3f - david, 74 minutes ago : READ ME
-    ```
+
+        ```bash
+            $ git log --pretty=format:"%h - %an, %ar : %s"
+            79cab15 - david, 5 minutes ago : filename changed
+            cf43a9a - david, 29 minutes ago : new file
+            2c82830 - david, 31 minutes ago : temp file commit
+            842dabd - david, 34 minutes ago : commit not staged files
+            7e6af66 - david, 39 minutes ago : markdown!!
+            1882b3f - david, 74 minutes ago : READ ME
+        ```
+        
     - git log --pretty=format:"%h - %an, %ar : %s" --graph
         - 브랜치와 머지 히스토리를 아스키 그래프로 출력해 준다.
     - git log --oneline --decorate
         - 현재 브랜치가 어떤 커밋을 가르키고 있는지를 보여준다.
-        
-    ```bash
-    $ git log --oneline --decorate
-    04345a6 (HEAD -> master, gitlab/master, markdown-test) edit
-    92ea5a3 ore edit
-    2a2c975 final
-    f1659c4 (origin/master) changed.
-    cf444ef edited again.
-    2061237 markdown edited
-    d5395e7 markdown edited
-    a744278 modified
-    5f868de Merge branch 'master' of https://github.com/thinkit-software/myRepository
-    09b6cc7 chekout all
-    848a151 Initial commit
-    79cab15 filename changed
-    cf43a9a new file
-    2c82830 temp file commit
-    842dabd commit not staged files
-    7e6af66 markdown!!
-    1882b3f READ ME
-    ```
+
+        ```bash
+        $ git log --oneline --decorate
+        04345a6 (HEAD -> master, gitlab/master, markdown-test) edit
+        92ea5a3 ore edit
+        2a2c975 final
+        f1659c4 (origin/master) changed.
+        cf444ef edited again.
+        2061237 markdown edited
+        d5395e7 markdown edited
+        a744278 modified
+        5f868de Merge branch 'master' of https://github.com/thinkit-software/myRepository
+        09b6cc7 chekout all
+        848a151 Initial commit
+        79cab15 filename changed
+        cf43a9a new file
+        2c82830 temp file commit
+        842dabd commit not staged files
+        7e6af66 markdown!!
+        1882b3f READ ME
+        ```
 
 8. 리모트 저장소
     - git clone https://github.com/thinkit-software/myRepository
