@@ -303,5 +303,6 @@
         ``` 
     - git checkout -b new_branch
         - 브랜치를 생성하고 checkout까지 한다.
+    - git branch -d branch_name
+        - 브랜치를 삭제한다.
 
-    
