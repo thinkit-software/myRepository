@@ -303,5 +303,17 @@
         ``` 
     - git checkout -b new_branch
         - 브랜치를 생성하고 checkout까지 한다.
+    - git merge
 
+    ```bash
+    $ git checkout master
+    Switched to branch 'master'
+    Your branch is ahead of 'origin/master' by 3 commits.
+    (use "git push" to publish your local commits)
     
+    $ git merge markdown-test
+    Updating 04345a6..f91da9a
+    Fast-forward
+    git-command.md | 164 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-------------------------------
+    1 file changed, 133 insertions(+), 31 deletions(-)
+    ```    
