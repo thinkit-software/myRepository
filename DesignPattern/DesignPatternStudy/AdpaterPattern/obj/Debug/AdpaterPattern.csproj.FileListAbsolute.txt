@@ -1,0 +1,4 @@
+Z:\david\workspace\git\myRepository\DesignPattern\DesignPatternStudy\AdpaterPattern\bin\Debug\AdpaterPattern.dll
+Z:\david\workspace\git\myRepository\DesignPattern\DesignPatternStudy\AdpaterPattern\bin\Debug\AdpaterPattern.pdb
+Z:\david\workspace\git\myRepository\DesignPattern\DesignPatternStudy\AdpaterPattern\obj\Debug\AdpaterPattern.dll
+Z:\david\workspace\git\myRepository\DesignPattern\DesignPatternStudy\AdpaterPattern\obj\Debug\AdpaterPattern.pdb
