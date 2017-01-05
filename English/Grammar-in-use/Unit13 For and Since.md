@@ -2,7 +2,7 @@
 
 ## We use for and since to say how long something has been happening
 
-- for + a period of time
+- for + a period of time `for 다음에는 기간`
   - Sally has been working here for **six months**.
   - I haven't seen Tom for **three days**.
 
@@ -17,7 +17,7 @@
   ages
   years
   ```
-- since + the start of a period
+- since + the start of a period `since 다음에는 기간의 시작`
   - Sally has been working here since **April**.
   - I haven't seen Tom since **Monday**.
 
