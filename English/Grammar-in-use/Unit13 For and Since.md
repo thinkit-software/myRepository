@@ -32,3 +32,10 @@
   we arrived
   I got up
   ```
+- It is possible to leave out for (but not usually in negative sentences): `for를 생략하는 것은 가능하다 (그러나 부정문에서는 생략하지 않는다)`
+  - They've been married (for) ten years. (with or without for)
+  - They haven't had a holiday for ten years. (you must use for)
+- We do not use for + all ... (all day / all my life etc): `all과 for는 함께 사용하지 않는다.`
+  - I've lived there **all my life**. (not for all my life)
+- You can use in instead of for in negative sentences (I haven't ... etc): `부정문에서는 for 대신 in을 사용할 수 있다`
+  - They haven't had a holiday **in ten years**.
