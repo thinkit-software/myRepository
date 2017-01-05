@@ -42,11 +42,13 @@
 
 ## Compare When ... ? (+ past simple) and how long ... ? (+present perfect)
 
+`when 다음에는 과거형 how long 다음에는 현재 완료형`
+
 - A: When did it start raining?
-- B: It started raining **(an hour ago / at 1 o'clock)**.
+- B: It started raining **(an hour ago / at 1 o'clock)**. `발생 시각`
 
 - A: How long has it been raining?
-- B: It's been raining **(for an hour / since 1 o'clock)**.
+- B: It's been raining **(for an hour / since 1 o'clock)**. `발생 기간`
 
 - A: When did Joe and Carol first meet?
 - B: They first met **(a long time ago / when they were at school)**.
